@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.landing {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.enter-text {
+    font-size: 1.2em;
+    text-transform: lowercase;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    position: relative;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+.profile h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.link-card i {
+    font-size: 1.5em;
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.fa-discord {
+    font-size: 1.5em;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+.fa-globe {
+    font-size: 1.5em;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+.link-card:hover {
+    transform: none;
+}
+
+.link-card:hover i {
+    color: transparent;
+}
+
+.link-card::before,
+.link-card::after {
+    display: none;
+}
+
+.glitch {
+    position: relative;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #000000,
+                 0.025em 0.04em 0 #0004ff;
+    animation: glitch 725ms infinite;
+}
+
+.glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #0055ff;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #0055ff;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim2 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #fffc00; }
+    15% { text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #fffc00; }
+    16% { text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                     -0.05em -0.05em 0 #fffc00; }
+    49% { text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                     -0.05em -0.05em 0 #fffc00; }
+    50% { text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                     0 -0.04em 0 #fffc00; }
+    99% { text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                     0 -0.04em 0 #fffc00; }
+    100% { text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+                     -0.04em -0.025em 0 #fffc00; }
+}
+
+@keyframes glitch-anim {
+    0% { clip: rect(51px, 9999px, 28px, 0); }
+    5% { clip: rect(70px, 9999px, 19px, 0); }
+    10% { clip: rect(92px, 9999px, 13px, 0); }
+    15% { clip: rect(85px, 9999px, 49px, 0); }
+    20% { clip: rect(45px, 9999px, 56px, 0); }
+    25% { clip: rect(66px, 9999px, 77px, 0); }
+    30% { clip: rect(82px, 9999px, 31px, 0); }
+    35% { clip: rect(21px, 9999px, 73px, 0); }
+    40% { clip: rect(89px, 9999px, 38px, 0); }
+    45% { clip: rect(54px, 9999px, 62px, 0); }
+    50% { clip: rect(30px, 9999px, 81px, 0); }
+    55% { clip: rect(63px, 9999px, 37px, 0); }
+    60% { clip: rect(24px, 9999px, 14px, 0); }
+    65% { clip: rect(45px, 9999px, 73px, 0); }
+    70% { clip: rect(77px, 9999px, 31px, 0); }
+    75% { clip: rect(86px, 9999px, 28px, 0); }
+    80% { clip: rect(63px, 9999px, 71px, 0); }
+    85% { clip: rect(10px, 9999px, 44px, 0); }
+    90% { clip: rect(47px, 9999px, 79px, 0); }
+    95% { clip: rect(24px, 9999px, 37px, 0); }
+    100% { clip: rect(82px, 9999px, 64px, 0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(0, 85, 255, 0.2) 0%,
+        rgba(0, 85, 255, 0.1) 50%,
+        transparent 70%
+    );
+    filter: blur(5px);
+    transition: all 0.3s;
+}
+
+.link-card:hover::before {
+    background: radial-gradient(circle, 
+        rgba(0, 85, 255, 0.4) 0%,
+        rgba(0, 85, 255, 0.2) 60%,
+        transparent 80%
+    );
+    filter: blur(8px);
+}
+
+.discord-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 300px;
+}
+
+.discord-header {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 15px;
+}
+
+.discord-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #0055ff;
+}
+
+.discord-status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #43b581;
+    border: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+.discord-info {
+    text-align: center;
+}
+
+.discord-name {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.discord-tag {
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.discord-activity {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.discord-activity i {
+    color: #0055ff;
+    margin-right: 8px;
+}
+
+.song-info {
+    margin-top: 5px;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.cursor-credit {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.cursor-credit a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.cursor-credit a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
