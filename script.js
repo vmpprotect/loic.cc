@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updatePresenceUI(presence) {
         document.querySelector('.discord-avatar').src = `https://cdn.discordapp.com/avatars/${presence.discord_user.id}/${presence.discord_user.avatar}.png?size=512`;
-        document.querySelector('.glitch').textContent = presence.discord_user.display_name;
+        document.querySelector('.discord-name').textContent = presence.discord_user.display_name;
         
         const statusColors = {
             online: '#43b581',
