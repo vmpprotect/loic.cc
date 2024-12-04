@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         music.play();
     });
 
-    const DISCORD_ID = '1313591411500912641'; // vmp's ONLY discord id.
+    const DISCORD_ID = '1288998313160609876'; // vmp's ONLY discord id.
 
     async function updateDiscordPresence() {
         try {
