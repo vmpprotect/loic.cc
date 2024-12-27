@@ -117,8 +117,8 @@ body {
 
 .glitch {
     position: relative;
-    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #000000,
-                 0.025em 0.04em 0 #0004ff;
+    text-shadow: 0.05em 0 0 #ff0000, -0.03em -0.04em 0 #000000,
+                 0.025em 0.04em 0 #ff0000;
     animation: glitch 725ms infinite;
 }
 
@@ -140,14 +140,14 @@ body {
 
 .glitch::before {
     left: 2px;
-    text-shadow: -2px 0 #0055ff;
+    text-shadow: -2px 0 #ff0000;
     clip: rect(24px, 550px, 90px, 0);
     animation: glitch-anim 3s infinite linear alternate-reverse;
 }
 
 .glitch::after {
     left: -2px;
-    text-shadow: -2px 0 #0055ff;
+    text-shadow: -2px 0 #ff0000;
     clip: rect(85px, 550px, 140px, 0);
     animation: glitch-anim2 2.5s infinite linear alternate-reverse;
 }
@@ -159,20 +159,20 @@ body {
 }
 
 @keyframes glitch {
-    0% { text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-                     0.025em 0.04em 0 #fffc00; }
-    15% { text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-                     0.025em 0.04em 0 #fffc00; }
-    16% { text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-                     -0.05em -0.05em 0 #fffc00; }
-    49% { text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
-                     -0.05em -0.05em 0 #fffc00; }
-    50% { text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-                     0 -0.04em 0 #fffc00; }
-    99% { text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
-                     0 -0.04em 0 #fffc00; }
-    100% { text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
-                     -0.04em -0.025em 0 #fffc00; }
+    0% { text-shadow: 0.05em 0 0 #ff0000, -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #ff0000; }
+    15% { text-shadow: 0.05em 0 0 #ff0000, -0.03em -0.04em 0 #fc00ff,
+                     0.025em 0.04em 0 #ff0000; }
+    16% { text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.035em 0 #fc00ff,
+                     -0.05em -0.05em 0 #ff0000; }
+    49% { text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.035em 0 #fc00ff,
+                     -0.05em -0.05em 0 #ff0000; }
+    50% { text-shadow: 0.05em 0.035em 0 #ff0000, 0.03em 0 0 #fc00ff,
+                     0 -0.04em 0 #ff0000; }
+    99% { text-shadow: 0.05em 0.035em 0 #ff0000, 0.03em 0 0 #fc00ff,
+                     0 -0.04em 0 #ff0000; }
+    100% { text-shadow: -0.05em 0 0 #ff0000, -0.025em -0.04em 0 #fc00ff,
+                     -0.04em -0.025em 0 #ff0000; }
 }
 
 @keyframes glitch-anim {
@@ -215,8 +215,8 @@ body {
     height: 100%;
     border-radius: 50%;
     background: radial-gradient(circle, 
-        rgba(0, 85, 255, 0.2) 0%,
-        rgba(0, 85, 255, 0.1) 50%,
+        rgba(255, 0, 0, 0.2) 0%,
+        rgba(255, 0, 0, 0.1) 50%,
         transparent 70%
     );
     filter: blur(5px);
@@ -225,8 +225,8 @@ body {
 
 .link-card:hover::before {
     background: radial-gradient(circle, 
-        rgba(0, 85, 255, 0.4) 0%,
-        rgba(0, 85, 255, 0.2) 60%,
+        rgba(255, 0, 0, 0.4) 0%,
+        rgba(255, 0, 0, 0.2) 60%,
         transparent 80%
     );
     filter: blur(8px);
@@ -253,7 +253,7 @@ body {
     height: 80px;
     border-radius: 50%;
     border: none;
-    box-shadow: 0 0 15px #0055ff, 0 0 30px rgb(0, 85, 255);
+    box-shadow: 0 0 15px #ff0000, 0 0 30px rgb(255, 0, 0);
 }
 
 .discord-status {
@@ -263,7 +263,7 @@ body {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #43b581;
+    background: #ff0000;
     border: 3px solid rgba(0, 0, 0, 0.4);
 }
 
@@ -291,7 +291,7 @@ body {
 }
 
 .discord-activity i {
-    color: #0055ff;
+    color: #ff0000;
     margin-right: 8px;
 }
 
