@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             },
             color: {
-                value: '#0055ff'
+                value: '#ff0000' // Changed to red
             },
             shape: {
                 type: 'circle'
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             line_linked: {
                 enable: true,
                 distance: 150,
-                color: '#0055ff',
+                color: '#ff0000', // Changed to red
                 opacity: 0.2,
                 width: 1
             },
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     distance: 250,
                     line_linked: {
                         opacity: 0.5,
-                        color: '#0055ff'
+                        color: '#ff0000' // Changed to red
                     }
                 },
                 push: {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ...Array(2).fill().map(() => ({
                         x: e.clientX,
                         y: e.clientY,
-                        color: '#0055ff',
+                        color: '#ff0000', // Changed to red
                         size: Math.random() * 3 + 2,
                         vx: (Math.random() - 0.5) * 2,
                         vy: (Math.random() - 0.5) * 2
@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.discord-name').textContent = presence.discord_user.display_name;
         
         const statusColors = {
-            online: '#43b581',
-            idle: '#faa61a',
-            dnd: '#f04747',
-            offline: '#747f8d'
+            online: '#ff4d4d', // Changed to shades of red
+            idle: '#ff9999', // Changed to lighter red
+            dnd: '#ff0000',  // Changed to bright red
+            offline: '#660000' // Changed to dark red
         };
         document.querySelector('.discord-status').style.background = statusColors[presence.discord_status];
 
@@ -158,4 +158,4 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
     }
-}); 
+});
